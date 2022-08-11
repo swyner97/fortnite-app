@@ -1,4 +1,4 @@
-# fortnite-app
+# Fortnite App
 
 User Story:
 
