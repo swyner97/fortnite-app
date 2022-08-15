@@ -1,5 +1,5 @@
-fetch('https://fortnite-api.com/v2/shop/br').then(res =>{
-    console.log(res)
-    
-console.log(data)
-})
+let key = config.SECRET_API_KEY;
+
+fetch('https://fortnite-api.com/v2/shop/br')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
