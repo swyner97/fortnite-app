@@ -1,4 +1,4 @@
-let key = config.SECRET_API_KEY;
+// let key = config.SECRET_API_KEY;
 let url = 'https://cors-anywhere.herokuapp.com/https://fortnite-api.com/v2/shop/br/combined?entries=items&limit=10';
 
 
