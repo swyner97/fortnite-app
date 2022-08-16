@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> ebcd9b6856296e6f7db94fb6087c36f85256da9f
 let key = config.SECRET_API_KEY;
+=======
+// let key = config.SECRET_API_KEY;
+>>>>>>> feature/store
 let url = 'https://cors-anywhere.herokuapp.com/https://fortnite-api.com/v2/shop/br/combined?entries=items&limit=10';
 
 
@@ -21,6 +25,7 @@ let getAPI = (url) => {
 getAPI();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e7be82e78bbd7acaf39268d40f135af9d8e85663
 =======
@@ -28,6 +33,8 @@ getAPI();
 =======
 
 >>>>>>> ebcd9b6856296e6f7db94fb6087c36f85256da9f
+=======
+>>>>>>> feature/store
 // Submit button variable and function
 
 
@@ -44,6 +51,7 @@ function currentItemStore (event) {
     headers: { "TRN-API-Key": "e486b319-39d4-49b9-a3f1-ee5151dd4bb6"},
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -80,6 +88,9 @@ function currentItemStore (event) {
 =======
 >>>>>>> feature/store
   fetch("https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store", options)
+=======
+fetch("https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store", options)
+>>>>>>> feature/store
     .then((response) => response.json())
     .then(function(data) {
       console.log(data);
@@ -105,6 +116,7 @@ function currentItemStore (event) {
 // In order to get access to this api, we have to go to this link (cors-anywhere.herokuapp.com) and get access every day/every time we work on the project. 
 // We also have to put this in our README for the grading team so they can refresh before grading. 
 
+<<<<<<< HEAD
 
 
 
@@ -140,3 +152,5 @@ function currentItemStore (event) {
 >>>>>>> e7be82e78bbd7acaf39268d40f135af9d8e85663
 =======
 >>>>>>> ebcd9b6856296e6f7db94fb6087c36f85256da9f
+=======
+>>>>>>> feature/store
