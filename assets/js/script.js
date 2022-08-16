@@ -1,3 +1,19 @@
+
+let key = config.SECRET_API_KEY;
+let url = 'https://cors-anywhere.herokuapp.com/https://fortnite-api.com/v2/shop/br/combined?entries=items&limit=10';
+
+
+let getAPI = (url) => {
+    const options = {method: 'GET'};
+
+    fetch('https://fortnite-api.com/v2/shop/br', options)
+      .then(response => response.json())
+      .then(response => console.log(response.data))
+      .catch(err => console.error(err));
+}
+
+getAPI();
+
 // Submit button variable and function
 let submitBtnEl = $("#submit-btn");
 
@@ -10,6 +26,13 @@ function currentItemStore (event) {
     method: "GET",
     headers: { "TRN-API-Key": "e486b319-39d4-49b9-a3f1-ee5151dd4bb6"},
   };
+
+
+  fetch("https://crossorigin.me/https://api.fortnitetracker.com/v1/store", options)
+    .then((response) => response.json())
+    .then((response) => console.log(response))
+    .catch((err) => console.error(err));
+});
 
   fetch("https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store", options)
     .then((response) => response.json())
@@ -33,7 +56,10 @@ function currentItemStore (event) {
 
   currentItemStore();
 
+
 // In order to get access to this api, we have to go to this link (cors-anywhere.herokuapp.com) and get access every day/every time we work on the project. 
 // We also have to put this in our README for the grading team so they can refresh before grading. 
+
+
 
 
