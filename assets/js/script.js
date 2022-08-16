@@ -17,7 +17,6 @@ getAPI();
 
 
 function currentItemStore (event) {
-  
   const options = {
     method: "GET",
     headers: { "TRN-API-Key": "e486b319-39d4-49b9-a3f1-ee5151dd4bb6"},
@@ -41,8 +40,7 @@ function currentItemStore (event) {
       }
     })
     .catch((err) => console.error(err));
-  }; 
-
+};
   currentItemStore();
 
 
