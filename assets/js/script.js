@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 let key = config.SECRET_API_KEY;
 let url = 'https://cors-anywhere.herokuapp.com/https://fortnite-api.com/v2/shop/br/combined?entries=items&limit=10';
@@ -14,6 +15,8 @@ let getAPI = (url) => {
 
 getAPI();
 
+=======
+>>>>>>> e7be82e78bbd7acaf39268d40f135af9d8e85663
 // Submit button variable and function
 let submitBtnEl = $("#submit-btn");
 
@@ -27,7 +30,10 @@ function currentItemStore (event) {
     headers: { "TRN-API-Key": "e486b319-39d4-49b9-a3f1-ee5151dd4bb6"},
   };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e7be82e78bbd7acaf39268d40f135af9d8e85663
   fetch("https://crossorigin.me/https://api.fortnitetracker.com/v1/store", options)
     .then((response) => response.json())
     .then((response) => console.log(response))
@@ -63,3 +69,28 @@ function currentItemStore (event) {
 
 
 
+<<<<<<< HEAD
+=======
+// function insert(arr, index, ...items)
+// {
+//     return [
+//             ...arr.slice(0, index),
+//             ...items,
+//             ...arr.slice(index)
+//         ];
+// }
+ 
+// var arr = [arr];
+// var result = insert(arr);
+// console.log(result);
+
+
+// I believe this is the api for the current items rather than the full store.
+// I will keep it here just in case
+
+// fetch('https://fortnite-api.com/v2/shop/br').then(res =>{
+//     console.log(res)
+
+// console.log(data)
+// })
+>>>>>>> e7be82e78bbd7acaf39268d40f135af9d8e85663
