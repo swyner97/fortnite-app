@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Submit button variable and function
 let submitBtnEl = $("#submit-btn");
 
@@ -60,3 +61,31 @@ console.log(result);
 
 // console.log(data)
 // })
+=======
+let key = config.SECRET_API_KEY;
+let url = 'https://cors-anywhere.herokuapp.com/https://fortnite-api.com/v2/shop/br/combined?entries=items&limit=10';
+
+// function getAPI(url) {
+//     fetch(url)
+//         .then(function (response) {
+//             response.json()
+//         })
+//         .then(function (data) {
+//             console.log(data)
+//         });
+// }
+
+
+// getAPI();
+
+function getAPI(url) {
+    const options = {method: 'GET'};
+
+    fetch('https://fortnite-api.com/v2/shop/br', options)
+      .then(response => response.json())
+      .then(response => console.log(response.data.featured.entries))
+      .catch(err => console.error(err));
+}
+
+getAPI();
+>>>>>>> e14be8652930c26c236d6b6acce7d0af34455d26
