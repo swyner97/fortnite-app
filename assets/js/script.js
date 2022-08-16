@@ -5,38 +5,44 @@ let submitBtnEl = $("#submit-btn");
 submitBtnEl.on("click", function (event) {
   let userSearch = $(this).siblings("#searched-item").val();
   localStorage.setItem("item-request", userSearch);
-  $(this).siblings("#searched-item").val("");
 
   const options = {
-<<<<<<< HEAD
     method: "GET",
-    headers: { "TRN-API-Key": " e486b319-39d4-49b9-a3f1-ee5151dd4bb6"},
-
+    headers: { "TRN-API-Key": "e486b319-39d4-49b9-a3f1-ee5151dd4bb6"},
   };
 
-  fetch("https://www.cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store", options)
+  fetch("https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store", options)
     .then((response) => response.json())
-    .then((response) => console.log(response))
+    .then(function(data) {
+      console.log(data);
+      for (var i=0; i<data.length; i++) {
+        let displayEl = $('.HTMLPLACEHOLDER')
+        let currentItemCardsEl = $(`<div></div>`);
+        let itemImageEl  = $(`<img src='${data[i].imageUrl}'/>`);
+        let itemNameEl = $(`<h3>${data[i].name}</h3>`);
+        let itemRarityEl = $(`<h4>${data[i].rarity}</h4>`);
+        let itemCostEl = $(`<h4>${data[i].vBucks}</h4>`);
+        let wishlistBtnEl = $(`<button class=wishlist-btn>Add to Wishlist</button>`)
+
+        // itemImageEl.attr('src', data[i].imageURL);
+        // itemNameEl.val(data[i].name);
+        // itemRarityEl.val(data[i].rarity);
+        // itemCostEl.val(data[i].vBucks);
+        currentItemCardsEl.append(itemImageEl, itemNameEl, itemRarityEl, itemCostEl, wishlistBtnEl);
+        displayEl.append(currentItemCardsEl);
+      }
+    })
     .catch((err) => console.error(err));
-=======
-    method: 'GET',
-    headers: {
-      'TRN-Api-Key': 'e486b319-39d4-49b9-a3f1-ee5151dd4bb6',
-    //   'Access-Control-Allow-Origin': '*',
-    },
-    // mode: 'no-cors'
-  };
-  
-  fetch('https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
->>>>>>> 08105d15f116d91ebe43f7e65f98ed8cdcc25ffb
 });
 
 // In order to get access to this api, we have to go to this link (cors-anywhere.herokuapp.com) and get access every day/every time we work on the project. 
 // We also have to put this in our README for the grading team so they can refresh before grading. 
 
+
+// Get the current store array and create cards for each item
+function createCurrentItemCards() {
+
+}
 
 
 
