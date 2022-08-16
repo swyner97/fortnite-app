@@ -23,15 +23,7 @@ function currentItemStore (event) {
     headers: { "TRN-API-Key": "e486b319-39d4-49b9-a3f1-ee5151dd4bb6"},
   };
 
-  fetch("https://crossorigin.me/https://api.fortnitetracker.com/v1/store", options)
-    .then((response) => response.json())
-    .then((response) => console.log(response))
-    .catch((err) => console.error(err));
-});
-
-
-
-  fetch("https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store", options)
+fetch("https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store", options)
     .then((response) => response.json())
     .then(function(data) {
       console.log(data);
