@@ -8,7 +8,6 @@ submitBtnEl.on("click", function (event) {
   $(this).siblings("#searched-item").val("");
 
   const options = {
-<<<<<<< HEAD
     method: "GET",
     headers: { "TRN-API-Key": " e486b319-39d4-49b9-a3f1-ee5151dd4bb6"},
 
@@ -18,8 +17,7 @@ submitBtnEl.on("click", function (event) {
     .then((response) => response.json())
     .then((response) => console.log(response))
     .catch((err) => console.error(err));
-=======
-    method: 'GET',
+        method: 'GET',
     headers: {
       'TRN-Api-Key': 'e486b319-39d4-49b9-a3f1-ee5151dd4bb6',
     //   'Access-Control-Allow-Origin': '*',
