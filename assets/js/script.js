@@ -22,49 +22,16 @@ submitBtnEl.on("click", function (event) {
         let itemNameEl = $(`<h3>${data[i].name}</h3>`);
         let itemRarityEl = $(`<h4>${data[i].rarity}</h4>`);
         let itemCostEl = $(`<h4>${data[i].vBucks}</h4>`);
-        let wishlistBtnEl = $(`<button class=wishlist-btn>Add to Wishlist</button>`)
+        let wishlistBtnEl = $(`<button class=wishlist-btn>Add to Wishlist</button>`);
 
-        // itemImageEl.attr('src', data[i].imageURL);
-        // itemNameEl.val(data[i].name);
-        // itemRarityEl.val(data[i].rarity);
-        // itemCostEl.val(data[i].vBucks);
         currentItemCardsEl.append(itemImageEl, itemNameEl, itemRarityEl, itemCostEl, wishlistBtnEl);
         displayEl.append(currentItemCardsEl);
       }
     })
     .catch((err) => console.error(err));
-});
+  }); 
 
 // In order to get access to this api, we have to go to this link (cors-anywhere.herokuapp.com) and get access every day/every time we work on the project. 
 // We also have to put this in our README for the grading team so they can refresh before grading. 
 
 
-// Get the current store array and create cards for each item
-function createCurrentItemCards() {
-
-}
-
-
-
-function insert(arr, index, ...items)
-{
-    return [
-            ...arr.slice(0, index),
-            ...items,
-            ...arr.slice(index)
-        ];
-}
- 
-var arr = [arr];
-var result = insert(arr);
-console.log(result);
-
-
-// I believe this is the api for the current items rather than the full store.
-// I will keep it here just in case
-
-// fetch('https://fortnite-api.com/v2/shop/br').then(res =>{
-//     console.log(res)
-
-// console.log(data)
-// })
