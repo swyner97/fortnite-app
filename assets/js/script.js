@@ -2,7 +2,7 @@
 let submitBtnEl = $("#submit-btn");
 
 
-submitBtnEl.on("click", function (event) {
+function currentItemStore (event) {
   let userSearch = $(this).siblings("#searched-item").val();
   localStorage.setItem("item-request", userSearch);
 
@@ -29,7 +29,9 @@ submitBtnEl.on("click", function (event) {
       }
     })
     .catch((err) => console.error(err));
-  }); 
+  }; 
+
+  currentItemStore();
 
 // In order to get access to this api, we have to go to this link (cors-anywhere.herokuapp.com) and get access every day/every time we work on the project. 
 // We also have to put this in our README for the grading team so they can refresh before grading. 
