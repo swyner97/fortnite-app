@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 let key = config.SECRET_API_KEY;
 let url = 'https://cors-anywhere.herokuapp.com/https://fortnite-api.com/v2/shop/br/combined?entries=items&limit=10';
 
@@ -17,19 +18,19 @@ getAPI();
 
 =======
 >>>>>>> e7be82e78bbd7acaf39268d40f135af9d8e85663
+=======
+>>>>>>> feature/store
 // Submit button variable and function
-let submitBtnEl = $("#submit-btn");
 
 
 function currentItemStore (event) {
-  let userSearch = $(this).siblings("#searched-item").val();
-  localStorage.setItem("item-request", userSearch);
-
+  
   const options = {
     method: "GET",
     headers: { "TRN-API-Key": "e486b319-39d4-49b9-a3f1-ee5151dd4bb6"},
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -40,6 +41,8 @@ function currentItemStore (event) {
     .catch((err) => console.error(err));
 });
 
+=======
+>>>>>>> feature/store
   fetch("https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store", options)
     .then((response) => response.json())
     .then(function(data) {
