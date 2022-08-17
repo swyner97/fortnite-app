@@ -1,10 +1,3 @@
-// const options = {method: 'GET'};
-
-// fetch('https://fortnite-api.com/v2/shop/br/', options)
-//   .then(response => response.json())
-//   .then(response => console.log(response.data.featured.entries))
-//   .catch(err => console.error(err));
-
 var myHeaders = new Headers();
 myHeaders.append("Authorization", "{{authorization}}");
 
@@ -19,7 +12,7 @@ fetch("https://fortnite-api.theapinetwork.com/items/list", requestOptions)
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 
-
+console.log(result.data[i].item.name)
 
 // Submit button variable and function
 
@@ -47,13 +40,14 @@ fetch("https://fortnite-api.theapinetwork.com/items/list", requestOptions)
 //         currentItemCardsEl.append(itemImageEl, itemNameEl, itemRarityEl, itemCostEl, wishlistBtnEl);
 //         displayEl.append(currentItemCardsEl);
 //       }
-//     })
-//     .catch((err) => console.error(err));
-// // };
+//     }).catch((err) => console.error(err));
+// };
 
-// currentItemStore();
+
+
+currentItemStore();
 
 
 
 // In order to get access to this api, we have to go to this link (cors-anywhere.herokuapp.com) and get access every day/every time we work on the project. 
-// We also have to put this in our README for the grading team so they can refresh before grading. 
+// We also have to put this in our README for the grading team so they can refresh before grading.
