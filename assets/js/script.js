@@ -1,18 +1,30 @@
 var myHeaders = new Headers();
 myHeaders.append("Authorization", "{{authorization}}");
 
-var requestOptions = {
-  method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
-};
+
+let getAllItems = () => {
+
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
 
 fetch("https://fortnite-api.theapinetwork.com/items/list", requestOptions)
   .then(response => response.json())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 
-console.log(result.data[i].item.name)
+  for (let i = 0; i < result.length; i++) {
+    let item = result.data.item
+    console.log(item)
+  }
+
+}
+
+getAllItems
+
+
 
 // Submit button variable and function
 
@@ -45,7 +57,7 @@ console.log(result.data[i].item.name)
 
 
 
-currentItemStore();
+// currentItemStore();
 
 
 
