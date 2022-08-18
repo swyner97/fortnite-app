@@ -1,4 +1,3 @@
-let key = config.SECRET_API_KEY;
 let url = 'https://cors-anywhere.herokuapp.com/https://fortnite-api.com/v2/shop/br/combined?entries=items&limit=10';
 
 let getAPI = (url) => {
@@ -12,7 +11,7 @@ let getAPI = (url) => {
 
 getAPI();
 
-// Submit button variable and function
+// Populate current items from API
 
 
 function currentItemStore(event) {
@@ -27,8 +26,8 @@ function currentItemStore(event) {
     .then(function (data) {
       console.log(data);
       for (var i = 0; i < data.length; i++) {
-        let displayEl = $('.HTMLPLACEHOLDER')
-        let currentItemCardsEl = $(`<div></div>`);
+        let displayEl = $('.current-store-gallery')
+        let currentItemCardsEl = $(`<div class="w3-padding w3-margin item-card"></div>`);
         let itemImageEl = $(`<img src='${data[i].imageUrl}'/>`);
         let itemNameEl = $(`<h3>${data[i].name}</h3>`);
         let itemRarityEl = $(`<h4>${data[i].rarity}</h4>`);
