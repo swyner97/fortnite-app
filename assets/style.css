@@ -4,6 +4,7 @@ body {
     /* background: url("./assets/images/image3.png"); */
     background-color: hsl(217, 71%, 45%);
     justify-content: space-around;
+    margin: 20px  hsl(217, 71%, 45%);
 }
 
 .title{
@@ -14,12 +15,13 @@ body {
 
 }
 .input {
+    display: flex;
+    position: relative;
     align-items: center;
  justify-content: center;
  margin-left:640px;
  margin-top:10px;
-flex-wrap:wrap;;
- 
+flex-wrap:wrap;
 }
 
 .image img {
@@ -57,6 +59,7 @@ h2 p{
 
 }
 .footer{
+    font-family: 'Girassol', cursive;
     background-color: hsl(217, 71%, 45%);
     color:white;
     font-size:x-large;
@@ -67,7 +70,7 @@ h2 {
     justify-content: space-around;
     color: white;
     font-family: 'Girassol', cursive;
-    margin: 12px;
+    margin: 8px;
 }
 caption{
 
@@ -75,4 +78,9 @@ caption{
     color: white;
     font-family: 'Girassol', cursive;
     margin: 12px;
+}
+article:hover {
+
+    box-shadow: 10px 5px 5px black;
+    opacity:75%;
 }
