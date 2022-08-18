@@ -12,7 +12,7 @@ let getAPI = (url) => {
 
 getAPI();
 
-// Current store items to populate HTML
+// Submit button variable and function
 
 
 function currentItemStore(event) {
