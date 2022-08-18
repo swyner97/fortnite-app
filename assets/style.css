@@ -1,20 +1,10 @@
 body  {
-
     background-color:rgb(39, 104, 223);
 }
-
-
-
-
 
 h1 {
     font-family: "Raleway", Arial, sans-serif;
     letter-spacing: 6px
-
-
-
-
-
 }
 
 .w3-row-padding img {margin-bottom: 12px}
@@ -31,6 +21,7 @@ footer {
 .item-card {
     background-image: radial-gradient(rgb(66, 38, 1), tan);
 }
+
 .item-card img {
     height: 50%;
     width: 50%;
