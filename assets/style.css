@@ -56,3 +56,23 @@ h2 p{
     font-family: 'Girassol', cursive;
 
 }
+.footer{
+    background-color: hsl(217, 71%, 45%);
+    color:white;
+    font-size:x-large;
+    margin-left: 790px;
+}
+
+h2 {
+    justify-content: space-around;
+    color: white;
+    font-family: 'Girassol', cursive;
+    margin: 12px;
+}
+caption{
+
+    justify-content: space-around;
+    color: white;
+    font-family: 'Girassol', cursive;
+    margin: 12px;
+}
