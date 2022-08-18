@@ -1,1 +1,58 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+body {
+    display: block;
+    flex-wrap: wrap;
+    /* background: url("./assets/images/image3.png"); */
+    background-color: hsl(217, 71%, 45%);
+    justify-content: space-around;
+}
+
+.title{
+
+    color: white;
+    font-family: 'Girassol', cursive;
+
+
+}
+.input {
+    align-items: center;
+ justify-content: center;
+ margin-left:640px;
+ margin-top:10px;
+flex-wrap:wrap;;
+ 
+}
+
+.image img {
+
+    max-width: 950px;
+    padding: 12px
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: hsl(217, 71%, 45%);
+
+
+}
+
+a {
+    justify-content: space-around;
+    color: white;
+    font-family: 'Girassol', cursive;
+    margin: 12px;
+
+}
+
+h2 p{
+    color: white;
+    font-family: 'Girassol', cursive;
+
+}

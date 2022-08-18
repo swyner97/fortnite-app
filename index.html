@@ -3,7 +3,7 @@
 
 <head>
 
-  
+
     <meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,79 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style.css">
-    <style>
-
-        body {
-            display: block;
-            flex-wrap: wrap;
-            /* background: url("./assets/images/image3.png"); */
-            background-color: hsl(217, 71%, 45%);
-        }
-
-        .title {
-
-            color: white;
-            font-family: 'Girassol', cursive;
-
-
-        }
-
-        .image img {
-
-            max-width: 950px;
-            padding: 12px
-        }
-
-        .center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-around;
-            background-color: hsl(217, 71%, 45%);
-
-
-        }
-
-        a {
-            justify-content: space-around;
-            color: white;
-            font-family: 'Girassol', cursive;
-            margin: 12px;
-
-        }
-
-        h2 {
-            color: white;
-            font-family: 'Girassol', cursive;
-
-        }
-    </style>
 
     <title>FORTNITE APP STORE</title>
 
 </head>
+
 <body>
+    <section>
+        <div class="hero has-background-image">
+            <div class="hero-body is-info is-8">
+                <!-- <p class="title center is-2"> -->
+                <figure class="image center">
+                    <img src="./assets/images/image3.png">
 
-    <div class="hero has-background-image">
-        <div class="hero-body is-info is-8">
-            <!-- <p class="title center is-2"> -->
-            <figure class="image center">
-                <img src="./assets/images/image3.png">
-
-            </figure>
-            <h2 class="subtitle center is-1 has-text-white">APP STORE</h2>
-            </p>
+                </figure>
+                <h2 class="subtitle center is-1 has-text-white">APP STORE</h2>
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
     <hr>
     <div>
         <nav class="navbar center " role="navigation" aria-label="navbar">
-            <ul class="navbar center is-size-3 is-info-dark">
+            <ul class="navbar center is-size-3 is-i-danfork">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Search Items</a></li>
                 <li><a href="#">Wish List</a></li>
@@ -92,10 +42,12 @@
             </ul>
 
         </nav>
-        <input class="input center is-rounded" style="width: 33%;" type="text" placeholder="Search Items">
+        <div>
+        <input class="input is-rounded" style="width: 33%;" type="text" placeholder="Search Items">
+    </div>
         <hr>
     </div>
-    <div class="tile is-ancestor is-hover">
+    <div class="tile is-ancestor is-horizontal">
         <div class="tile is-vertical is-8">
             <div class="tile">
                 <div class="tile is-parent is-vertical">
@@ -115,47 +67,41 @@
                     </article>
                 </div>
 
-                <div class="tile is-parent">
+                <div class="tile is-parent is-vertical">
                     <article class=" tile is-12 is-child notification is-info">
                         <p class="title">What's New</p>
                         <p class="subtitle">The Latest</p>
                         <figure>
                             <img src="./assets/images/image2.jpg">
                         </figure>
-                    </article>
-                   </div>
-
-                </div>
-                <div class="tile is-vertical is-8">
-                    <div class="tile">
-                        <div class="tile is-parent is-vertical">
-                            <article class="tile is-child notification is-info">
-                                <p class="title">Players</p>
-                                <p class="subtitle">Choose Yours</p>
-                                <figure class="image is-4by3">
-                                    <img src="./assets/images/image7.jpg">
-                                </figure>
-                            </article>
-                            <article class="tile is-child notification is-warning">
-                                <p class="title">Searched Items</p>
-                                <p class="subtitle">Viewed</p>
-                                <figure class="image is-4by2">
-                                    <img src="./assets/images/image8.webp">
-                                </figure>
-                            </article>
-                        </div>
-                    <article class="tile is-child notification is-warning">
-                        <p class="title">Wish List</p>
-                        <p class="subtitle">My List</p>
-                        <figure class="image is-1by1 is-fullwidth">
-                            <img src="./assets/images/image9.webp">
-                        </figure>
-                    </article>
                 </div>
             </div>
-            <script src="./assets/js/script.js"></script>
+
+        </div>
+  
+    <div class="tile is-parent is-vertical is-4 is-fullwidth">
+        <div class="tile">
+            <div class="tile is-parent is-vertical">
+                <article class="tile is-child notification is-warning">
+                    <p class="title">Players</p>
+                    <p class="subtitle">Pick Yours</p>
+                    <figure class="image is-4by3">
+                        <img src="./assets/images/image.jpg">
+                    </figure>
+                </article>
+                <article class=" tile is-12 is-child notification is-info">
+                    <p class="title">Wish List</p>
+                    <p class="subtitle">My List</p>
+                    <figure>
+                        <img src="./assets/images/image9.webp">
+                    </figure>
+                </article>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="./assets/js/script.js"></script>
 </body>
 
-
 </html>
-
