@@ -1,126 +1,161 @@
 <!DOCTYPE html>
-<html>
-<head>
-<<<<<<< HEAD
-<title>Fortnite App Store</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./assets/style.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-=======
-    <title>Fortnite App Store</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
->>>>>>> af6ba90021f988352bab4c5fd8bee32c5d462f93
+<html lang="en">
 
-</style>
+<head>
+
+  
+    <meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <style>
+
+        body {
+            display: block;
+            flex-wrap: wrap;
+            /* background: url("./assets/images/image3.png"); */
+            background-color: hsl(217, 71%, 45%);
+        }
+
+        .title {
+
+            color: white;
+            font-family: 'Girassol', cursive;
+
+
+        }
+
+        .image img {
+
+            max-width: 950px;
+            padding: 12px
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: hsl(217, 71%, 45%);
+
+
+        }
+
+        a {
+            justify-content: space-around;
+            color: white;
+            font-family: 'Girassol', cursive;
+            margin: 12px;
+
+        }
+
+        h2 {
+            color: white;
+            font-family: 'Girassol', cursive;
+
+        }
+    </style>
+
+    <title>FORTNITE APP STORE</title>
+
 </head>
 <body>
-<<<<<<< HEAD
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-content" style="max-width:1500px">
+    <div class="hero has-background-image">
+        <div class="hero-body is-info is-8">
+            <!-- <p class="title center is-2"> -->
+            <figure class="image center">
+                <img src="./assets/images/image3.png">
 
-<!-- Header -->
-<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
-  <h1 class="w3-xxlarge">FORTNITE</h1>
-  <h1>APP STORE</h1>
-  
-  <div class="w3-padding-32">
-    <div class="w3-bar w3-border">
-      <a href="#" class="w3-bar-item w3-button">Home</a>
-      <a href="#" class="w3-bar-item w3-button w3-light-grey">Search Items</a>
-      <a href="#" class="w3-bar-item w3-button">Wish List</a>
+            </figure>
+            <h2 class="subtitle center is-1 has-text-white">APP STORE</h2>
+            </p>
+        </div>
     </div>
-   
-  </div>
-  <input type="text" placeholder="Search..">
-</header>
+    <hr>
+    <div>
+        <nav class="navbar center " role="navigation" aria-label="navbar">
+            <ul class="navbar center is-size-3 is-info-dark">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search Items</a></li>
+                <li><a href="#">Wish List</a></li>
+                <li class="is-active"><a href="#" aria-current="page">About</a></li>
 
-<!-- Photo Grid -->
-<div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
-  <div class="w3-half" id="current-store-cards">
-  </div>
+            </ul>
 
+        </nav>
+        <input class="input center is-rounded" style="width: 33%;" type="text" placeholder="Search Items">
+        <hr>
+    </div>
+    <div class="tile is-ancestor is-hover">
+        <div class="tile is-vertical is-8">
+            <div class="tile">
+                <div class="tile is-parent is-vertical">
+                    <article class="tile is-child notification is-info">
+                        <p class="title">Weapons</p>
+                        <p class="subtitle">Pick Yours</p>
+                        <figure class="image is-4by3">
+                            <img src="./assets/images/image.jpg">
+                        </figure>
+                    </article>
+                    <article class="tile is-child notification is-warning">
+                        <p class="title">Skins</p>
+                        <p class="subtitle">Select Yours</p>
+                        <figure class="image is-4by2">
+                            <img src="./assets/images/image5.jpg">
+                        </figure>
+                    </article>
+                </div>
 
-</div>
-  
-<!-- End Page Content -->
-</div>
+                <div class="tile is-parent">
+                    <article class=" tile is-12 is-child notification is-info">
+                        <p class="title">What's New</p>
+                        <p class="subtitle">The Latest</p>
+                        <figure>
+                            <img src="./assets/images/image2.jpg">
+                        </figure>
+                    </article>
+                   </div>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-rgb(102, 15, 102) w3-center w3-large"> 
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-</footer>
-
-</body>
-</html>
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-    <script src="./assets/js/script.js"></script>
-</body>
-</html>
-=======
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-content" style="max-width:1500px">
-
-        <!-- Header -->
-        <header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
-            <h1 class="w3-xlarge">FORTNITE</h1>
-            <h1>APP STORE</h1>
-
-            <div class="w3-padding-32">
-                <div class="w3-bar w3-border">
-                    <a href="index.html" class="w3-bar-item w3-button">Home</a>
-                    <a href="search.html" class="w3-bar-item w3-button w3-light-grey">Search Items</a>
-                    <a href="#" class="w3-bar-item w3-button">Wish List</a>
+                </div>
+                <div class="tile is-vertical is-8">
+                    <div class="tile">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification is-info">
+                                <p class="title">Players</p>
+                                <p class="subtitle">Choose Yours</p>
+                                <figure class="image is-4by3">
+                                    <img src="./assets/images/image7.jpg">
+                                </figure>
+                            </article>
+                            <article class="tile is-child notification is-warning">
+                                <p class="title">Searched Items</p>
+                                <p class="subtitle">Viewed</p>
+                                <figure class="image is-4by2">
+                                    <img src="./assets/images/image8.webp">
+                                </figure>
+                            </article>
+                        </div>
+                    <article class="tile is-child notification is-warning">
+                        <p class="title">Wish List</p>
+                        <p class="subtitle">My List</p>
+                        <figure class="image is-1by1 is-fullwidth">
+                            <img src="./assets/images/image9.webp">
+                        </figure>
+                    </article>
                 </div>
             </div>
-        </header>
-
-        <!-- Photo Grid -->
-        <div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
-            <div class="w3-half">
-        </div>
-
-        <!-- End Page Content -->
-    </div>
-
-    <div class="HTMLPLACEHOLDER">
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./assets/js/script.js"></script>
-
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-64 w3-rgb(102, 15, 102) w3-center w3-large">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </footer>
-
-
+            <script src="./assets/js/script.js"></script>
 </body>
+
+
 </html>
 
-
->>>>>>> af6ba90021f988352bab4c5fd8bee32c5d462f93
