@@ -23,3 +23,28 @@ footer {
 
    background-color:rgb(15, 28, 207);
 }
+
+.current-store-gallery {
+    background-color:rgb(39, 104, 223);
+}
+
+.item-card {
+    background-image: radial-gradient(rgb(66, 38, 1), tan);
+}
+.item-card img {
+    height: 50%;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.item-card h3 {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 30px;
+   vertical-align: middle;
+}
+
+.item-card h4 {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 25px;
+    vertical-align: middle;
+}
