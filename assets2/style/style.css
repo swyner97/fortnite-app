@@ -1,0 +1,49 @@
+body {
+    display: block;
+    flex-wrap: wrap;
+    /* background: url("./assets/images/image3.png"); */
+    background-color: hsl(217, 71%, 45%);
+}
+
+.title {
+
+    color: white;
+    font-family: 'Girassol', cursive;
+
+
+}
+
+.image img {
+
+    max-width: 950px;
+    padding: 12px
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: hsl(217, 71%, 45%);
+
+
+}
+
+a {
+    justify-content: space-around;
+    color: white;
+    font-family: 'Girassol', cursive;
+    margin: 12px;
+
+}
+
+h2 {
+    color: white;
+    font-family: 'Girassol', cursive;
+
+}
