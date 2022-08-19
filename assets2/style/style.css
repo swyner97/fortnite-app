@@ -6,15 +6,11 @@ body {
 }
 
 .title {
-
     color: white;
     font-family: 'Girassol', cursive;
-
-
 }
 
 .image img {
-
     max-width: 950px;
     padding: 12px
 }
@@ -23,15 +19,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .navbar {
     display: flex;
     justify-content: space-around;
     background-color: hsl(217, 71%, 45%);
-
-
 }
 
 a {
@@ -39,11 +32,67 @@ a {
     color: white;
     font-family: 'Girassol', cursive;
     margin: 12px;
-
 }
 
 h2 {
     color: white;
     font-family: 'Girassol', cursive;
+}
 
+/* Current store cards style */
+
+#store-title {
+    text-align: center;
+    font-size: 50px;
+}
+
+#current-gallery {
+    text-align: center;
+}
+
+#item-card {
+    background-image: radial-gradient(white, hsl(217, 98%, 16%));
+    border: solid 7px #3E8ED0;
+    color: #FFE08A;
+    height: 23%;
+    width: 23%;
+    margin: 1%;
+    font-family: 'Girassol', cursive;
+    text-align: center;
+}
+
+#item-card img {
+height: 95%;
+width: 75%;
+justify-content: center;
+margin: auto;
+}
+
+#item-card h3 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#item-card h4 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#item-card button {
+    margin: auto;
+    color: white;
+    background-color:hsl(217, 71%, 45%);
+    border-radius: 12px;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width:770px) {
+    #item-card {
+    width: 320px;
+    height: 500px;
+    display: inline-block;
+    }
 }

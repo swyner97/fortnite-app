@@ -49,15 +49,24 @@ function currentItemStore(event) {
         .then(function (data) {
             console.log(data);
             for (var i = 0; i < data.length; i++) {
-                let displayEl = $('.current-store-gallery')
-                let currentItemCardsEl = $(`<div class="w3-padding w3-margin item-card"></div>`);
-                let itemImageEl = $(`<img src='${data[i].imageUrl}'/>`);
+                // gallery from HTML
+                let displayEl = $('#current-gallery')
+                // card div
+                let currentItemCardsEl = $(`<div class="card" id="item-card"></div>`);
+                // img
+                let itemImgDiv = $(`<div class='card-image'></div>`);
+                let itemImageEl = $(`<figure class='image is-3by2'><img src='${data[i].imageUrl}'/></figure>`);
+                itemImgDiv.append(itemImageEl);
+                // card content
+                let itemContentDiv = $(`<div class='card-content'></div>`);
                 let itemNameEl = $(`<h3>${data[i].name}</h3>`);
                 let itemRarityEl = $(`<h4>${data[i].rarity}</h4>`);
                 let itemCostEl = $(`<h4>${data[i].vBucks}</h4>`);
+                itemContentDiv.append(itemNameEl, itemRarityEl, itemCostEl);
+                // button
                 let wishlistBtnEl = $(`<button class=wishlist-btn>Add to Wishlist</button>`);
 
-                currentItemCardsEl.append(itemImageEl, itemNameEl, itemRarityEl, itemCostEl, wishlistBtnEl);
+                currentItemCardsEl.append(itemImgDiv, itemContentDiv, wishlistBtnEl);
                 displayEl.append(currentItemCardsEl);
             }
         })
@@ -65,6 +74,29 @@ function currentItemStore(event) {
 };
 
 currentItemStore();
+
+// Slideshow functionality
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("item-slide");
+//   var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+}
 
 // Local storage for wishlist/searchbar
 var wishlistAdder = document.querySelector(".wishlistAdder");

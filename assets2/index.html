@@ -42,64 +42,21 @@
         <input class="input center is-rounded" style="width: 33%;" type="text" placeholder="Search Items">
         <hr>
     </div>
-    <div class="tile is-ancestor is-hover">
-        <div class="tile is-vertical is-8">
-            <div class="tile">
-                <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-info">
-                        <p class="title">Weapons</p>
-                        <p class="subtitle">Pick Yours</p>
-                        <figure class="image is-4by3">
-                            <img src="./images/image.jpg">
-                        </figure>
-                    </article>
-                    <article class="tile is-child notification is-warning">
-                        <p class="title">Skins</p>
-                        <p class="subtitle">Select Yours</p>
-                        <figure class="image is-4by2">
-                            <img src="./images/image5.jpg">
-                        </figure>
-                    </article>
-                </div>
 
-                <div class="tile is-parent">
-                    <article class=" tile is-12 is-child notification is-info">
-                        <p class="title">What's New</p>
-                        <p class="subtitle">The Latest</p>
-                        <figure>
-                            <img src="./images/image2.jpg">
-                        </figure>
-                    </article>
-                   </div>
+    <h2 id="store-title">Today's Fortnite Store</h2>
+    <div class="columns is-multiline"id="current-gallery">
+    </div>
 
-                </div>
-                <div class="tile is-vertical is-8">
-                    <div class="tile">
-                        <div class="tile is-parent is-vertical">
-                            <article class="tile is-child notification is-info">
-                                <p class="title">Players</p>
-                                <p class="subtitle">Choose Yours</p>
-                                <figure class="image is-4by3">
-                                    <img src="./images//image7.jpg">
-                                </figure>
-                            </article>
-                            <article class="tile is-child notification is-warning">
-                                <p class="title">Searched Items</p>
-                                <p class="subtitle">Viewed</p>
-                                <figure class="image is-4by2">
-                                    <img src="./images/image8.webp">
-                                </figure>
-                            </article>
-                        </div>
-                    <article class="tile is-child notification is-warning">
-                        <p class="title">Wish List</p>
-                        <p class="subtitle">My List</p>
-                        <figure class="image is-1by1 is-fullwidth">
-                            <img src="./images/image9.webp">
-                        </figure>
-                    </article>
-                </div>
-            </div>
+    
+            <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+            <script>
+                bulmaCarousel.attach('#slider', {
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                    infinite: true,
+                    autoplay: true,
+                });
+            </script>
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
             <script src="./js2/script.js"></script>
