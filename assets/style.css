@@ -1,3 +1,7 @@
+
+
+
+
 body {
     display: block;
     flex-wrap: wrap;
@@ -15,13 +19,13 @@ body {
 
 }
 .input {
-    display: flex;
-    position: relative;
-    align-items: center;
- justify-content: center;
- margin-left:640px;
+
  margin-top:10px;
-flex-wrap:wrap;
+
+}
+.container{
+
+   text-align: center;
 }
 
 .image img {

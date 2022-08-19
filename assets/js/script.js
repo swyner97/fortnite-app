@@ -1,14 +1,14 @@
-<<<<<<< HEAD
+
 
 let key = config.SECRET_API_KEY;
 
 // let key = config.SECRET_API_KEY;
 
 let url = 'https://cors-anywhere.herokuapp.com/https://fortnite-api.com/v2/shop/br/combined?entries=items&limit=10';
-=======
+
 var myHeaders = new Headers();
 myHeaders.append("Authorization", "{{authorization}}");
->>>>>>> af6ba90021f988352bab4c5fd8bee32c5d462f93
+
 
 
 let getAllItems = () => {
@@ -35,7 +35,7 @@ getAllItems
 
 
 
-<<<<<<< HEAD
+
 
 
 // Submit button variable and function
@@ -58,7 +58,29 @@ function currentItemStore (event) {
     .then((response) => console.log(response))
     .catch((err) => console.error(err));
 };
-=======
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
 // Submit button variable and function
 
 
@@ -81,7 +103,7 @@ function currentItemStore (event) {
 //         let itemRarityEl = $(`<h4>${data[i].rarity}</h4>`);
 //         let itemCostEl = $(`<h4>${data[i].vBucks}</h4>`);
 //         let wishlistBtnEl = $(`<button class=wishlist-btn>Add to Wishlist</button>`);
->>>>>>> af6ba90021f988352bab4c5fd8bee32c5d462f93
+
 
 //         currentItemCardsEl.append(itemImageEl, itemNameEl, itemRarityEl, itemCostEl, wishlistBtnEl);
 //         displayEl.append(currentItemCardsEl);
@@ -91,7 +113,7 @@ function currentItemStore (event) {
 
 
 
-<<<<<<< HEAD
+
   fetch("https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store", options)
 
 fetch("https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store", options)
@@ -145,11 +167,11 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/st
 // console.log(data)
 // })
 
-=======
+
 // currentItemStore();
 
 
 
 // In order to get access to this api, we have to go to this link (cors-anywhere.herokuapp.com) and get access every day/every time we work on the project. 
 // We also have to put this in our README for the grading team so they can refresh before grading.
->>>>>>> af6ba90021f988352bab4c5fd8bee32c5d462f93
+
