@@ -8,7 +8,7 @@ body {
     /* background: url("./assets/images/image3.png"); */
     background-color: hsl(217, 71%, 45%);
     justify-content: space-around;
-    margin: 20px  hsl(217, 71%, 45%);
+    /* margin: 20px  hsl(217, 71%, 45%); */
 }
 
 .title{
@@ -50,7 +50,7 @@ body {
 }
 .navbar-item, .navbar-link {
     color: white;
-    font-size: x-large;
+    font-size: xx-large;
     display: block;
 background:hsl(217, 71%, 45%);
     padding: 0.5rem 0.75rem;
@@ -59,6 +59,7 @@ background:hsl(217, 71%, 45%);
 .navbar-burger{
     color: white;
     background:hsl(217, 71%, 45%);
+    box-shadow: transparent;
 }
 .navbar-brand a:hover{
 
@@ -68,10 +69,12 @@ background:hsl(217, 71%, 45%);
 }
 .navbar-menu.is-active {
 background: none;
-}
+box-shadow: 10px 5px 5px black;
 
+}
 .navbar-burger.is-active{
-    background: #3e8ed0;
+    background: hsl(217, 71%, 45%);
+ 
 
 }
 a {

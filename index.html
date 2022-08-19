@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
+    <link href="~bulma-carousel/dist/css/bulma-carousel.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style.css">
 
@@ -94,7 +95,7 @@
                     </article>
                 </div>
 
-                <div class="tile is-parent is-vertical">
+                <div class="tile is-parent is-vertical is-info-dark">
                     <article class=" tile is-12 is-child notification is-info">
                         <p class="title">What's New</p>
                         <p class="subtitle">The Latest</p>
@@ -128,14 +129,42 @@
         </div>
     </div>
 </div>
+
+<section class="section">
+    <div class="container">
+        <!-- Start Carousel -->
+        <div id="carousel-demo" class="carousel">
+            <div class="item-1">
+                <!-- Slide Content -->
+            </div>
+            <div class="item-2">
+                <!-- Slide Content -->
+            </div>
+            <div class="item-3">
+                <!-- Slide Content -->
+            </div>
+        </div>
+        <!-- End Carousel -->
+    </div>
+</section>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+<script>
+bulmaCarousel.attach('#carousel-demo', {
+    slidesToScroll: 1,
+    slidesToShow: 4
+}); -->
+</script>
 <hr>
 <footer class="footer">
-    
+
     <h2>Made by The Fortnite Gang</h2>
     <caption>
         &copy; 2022 Fortnite Gang LLC
     </caption>
 </footer>
+<script src="~bulma-carousel/dist/js/bulma-carousel.min.js"></script>
+<scrip src="./assets/js/carousel.js"></scrip>
 <script src="./assets/js/burger.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
