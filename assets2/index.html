@@ -10,134 +10,89 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <style>
-
-        body {
-            display: block;
-            flex-wrap: wrap;
-            /* background: url("./assets/images/image3.png"); */
-            background-color: hsl(217, 71%, 45%);
-        }
-
-        .title {
-
-            color: white;
-            font-family: 'Girassol', cursive;
-
-
-        }
-
-        .image img {
-
-            max-width: 950px;
-            padding: 12px
-        }
-
-        .center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-around;
-            background-color: hsl(217, 71%, 45%);
-
-
-        }
-
-        a {
-            justify-content: space-around;
-            color: white;
-            font-family: 'Girassol', cursive;
-            margin: 12px;
-
-        }
-
-        h2 {
-            color: white;
-            font-family: 'Girassol', cursive;
-
-        }
-    </style>
-
+    <link rel="stylesheet" href="./style/style.css">
     <title>FORTNITE APP STORE</title>
 
 </head>
 
 <body>
-
+<section>
     <div class="hero has-background-image">
         <div class="hero-body is-info is-8">
             <!-- <p class="title center is-2"> -->
             <figure class="image center">
-                <img src="./assets/images/image3.png">
+                <img src="./images/image3.png">
 
             </figure>
             <h2 class="subtitle center is-1 has-text-white">APP STORE</h2>
             </p>
         </div>
     </div>
+</section>
     <hr>
-    <div>
-        <nav class="navbar center " role="navigation" aria-label="navbar">
-            <ul class="navbar center is-size-3 is-info-dark">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Search Items</a></li>
-                <li><a href="#">Wish List</a></li>
-                <li class="is-active"><a href="#" aria-current="page">About</a></li>
+  
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <div class="container">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        
+        <div id="navbarBasicExample" class="navbar-menu">
+           
+          <div class="navbar-start">
+            <a href="" class="navbar-item">
+              Home
+            </a>
+      
+            <a href="" class="navbar-item">
+              Search Items
+            </a>
+            <a href="" class="navbar-item">
+                Wish List
+              </a>
+      
+              <a href="" class="navbar-item">
+                About
+              </a>
+        
+      
+                      </div>
+                    </div>
+          </div>
 
-            </ul>
-
-        </nav>
+      
+        
+        </div>
+      </nav>
+      <div class="container">
         <input class="input center is-rounded" style="width: 33%;" type="text" placeholder="Search Items">
+    </div>
         <hr>
     </div>
-<<<<<<< HEAD
-        <hr>
-    <div class="tile is-ancestor is-horizontal">
-        <div class="tile is-vertical is-8">
-            <div class="tile">
-                <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-info">
-                        <p class="title">Weapons</p>
-                        <p class="subtitle">Pick Yours</p>
-                        <figure class="image is-4by3">
-                            <img src="./images/image.jpg">
-                        </figure>
-                    </article>
-                    <article class="tile is-child notification is-warning">
-                        <p class="title">Skins</p>
-                        <p class="subtitle">Select Yours</p>
-                        <figure class="image is-4by2">
-                            <img src="./images/image5.jpg">
-                        </figure>
-                    </article>
-                </div>
-
-                <div class="tile is-parent is-vertical">
-                    <article class=" tile is-12 is-child notification is-info">
-                        <p class="title">What's New</p>
-                        <p class="subtitle">The Latest</p>
-                        <figure>
-                            <img src="./assets/images/image2.jpg">
-                        </figure>
-                    </article>
-                   </div>
-=======
 
     <h2 id="store-title">Today's Fortnite Store</h2>
-    <div class="columns is-multiline"id="current-gallery">
+    <div class="columns is-multiline" id="current-gallery">
     </div>
->>>>>>> 178971e53d93d237f6cfd556d6b33056fea06f84
+    <hr>
+    <footer class="footer">
 
+        <h2>Made by The Fortnite Gang</h2>
+        <caption>
+            &copy; 2022 Fortnite Gang LLC
+        </caption>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js2/script.js"></script>
+    <script src="./js2/burger.js"></script>
     
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-            <script src="./js2/script.js"></script>
+
 </body>
 
 
