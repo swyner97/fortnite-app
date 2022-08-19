@@ -48,7 +48,32 @@ body {
 
 
 }
+.navbar-item, .navbar-link {
+    color: white;
+    font-size: x-large;
+    display: block;
+background:hsl(217, 71%, 45%);
+    padding: 0.5rem 0.75rem;
+    position: relative;
+}
+.navbar-burger{
+    color: white;
+    background:hsl(217, 71%, 45%);
+}
+.navbar-brand a:hover{
 
+    color:#ffe08a;
+
+
+}
+.navbar-menu.is-active {
+background: none;
+}
+
+.navbar-burger.is-active{
+    background: #3e8ed0;
+
+}
 a {
     justify-content: space-around;
     color: white;
@@ -67,7 +92,7 @@ h2 p{
     background-color: hsl(217, 71%, 45%);
     color:white;
     font-size:x-large;
-    margin-left: 790px;
+    text-align: center;
 }
 
 h2 {
