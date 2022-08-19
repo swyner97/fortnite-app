@@ -100,11 +100,7 @@ caption{
   font-family: 'Girassol', cursive;
   margin: 12px;
 }
-article:hover {
 
-  box-shadow: 10px 5px 5px black;
-  opacity:75%;
-}
 
 /* Current store cards style */
 
@@ -118,21 +114,33 @@ article:hover {
 }
 
 #item-card {
-  background-image: radial-gradient(white, hsl(217, 98%, 16%));
+  background-image: radial-gradient(hsl(225, 31%, 60%), hsl(217, 74%, 22%));
   border: solid 7px #3e8ed0;
-  color: #ffe08a;
+  color: #d3b460;
   height: 23%;
   width: 23%;
   margin: 1%;
   font-family: "Girassol", cursive;
   text-align: center;
+  opacity:85%;
 }
+#item-card:hover{
+cursor:pointer;
+  transform: scale(1.1);
+  opacity:100%;
+  box-shadow: 10px 5px 5px black;
+  border: solid 7px #d3b460;
+
+
+}
+
 
 #item-card img {
   height: 95%;
   width: 75%;
   justify-content: center;
   margin: auto;
+  transition:all;
 }
 
 #item-card h3 {
@@ -154,6 +162,16 @@ article:hover {
   border-radius: 12px;
   font-size: 25px;
   margin-bottom: 5px;
+  
+}
+#item-card button:hover{
+ 
+  cursor:pointer;
+  background-color:#3e8ed0;
+}
+#item-card button:active{
+cursor:grabbing;
+
 }
 
 @media only screen and (max-width: 770px) {
