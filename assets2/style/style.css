@@ -114,7 +114,7 @@ caption{
 }
 
 #item-card {
-  background-image: radial-gradient(hsl(226, 39%, 69%), hsl(217, 71%, 45%));
+  background-image: radial-gradient(hsl(225, 31%, 60%), hsl(217, 74%, 22%));
   border: solid 7px #3e8ed0;
   color: #d3b460;
   height: 23%;
@@ -133,10 +133,7 @@ cursor:pointer;
 
 
 }
-#item-card:active{
 
-  transform: scale(1.8)
-}
 
 #item-card img {
   height: 95%;
@@ -168,9 +165,13 @@ cursor:pointer;
   
 }
 #item-card button:hover{
-
+ 
   cursor:pointer;
   background-color:#3e8ed0;
+}
+#item-card button:active{
+cursor:grabbing;
+
 }
 
 @media only screen and (max-width: 770px) {
