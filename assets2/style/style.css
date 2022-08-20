@@ -102,6 +102,24 @@ caption{
 }
 
 
+.card {
+  background: rgb(100,222,246);
+background: radial-gradient(circle, rgba(100,222,246,1) 0%, rgba(9,9,121,1) 41%, rgba(2,0,36,1) 69%);
+width: fit-content;
+}
+
+.content {
+  color: #fff
+}
+
+.is-hidden {
+  display: none;
+}
+
+.card-image {
+  max-width: 512px;
+}
+
 /* Current store cards style */
 
 #store-title {
