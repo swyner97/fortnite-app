@@ -12,7 +12,7 @@ let getAllItems = () => {
 
     fetch("https://fortnite-api.theapinetwork.com/store/get", requestOptions)
         .then(response => response.json())
-        .then(data => {
+        .then(data => { 
 
             for (let i = 0; i < data.data.length; i++) {
                 let itemName = data.data[i].item.name.toString();
