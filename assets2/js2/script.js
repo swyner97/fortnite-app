@@ -1,9 +1,11 @@
 var myHeaders = new Headers();
 myHeaders.append("Authorization", "{{authorization}}");
 
+let searchBtn = $('.button');
+
 
 let getAllItems = () => {
-
+  
   var requestOptions = {
     method: 'GET',
     headers: myHeaders,
@@ -14,7 +16,7 @@ let getAllItems = () => {
     .then(response => response.json())
     .then(data => {
       let card = document.querySelectorAll('.card');
-      let searchBox = document.getElementById('searchbox').value;
+      let searchBox = $('.input').val();
 
       for (let i = 0; i < data.data.length; i++) {
         let itemName = data.data[i].item.name.toString();
@@ -59,56 +61,59 @@ let getAllItems = () => {
 
       }
     }).catch(error => console.log('error', error));
+};
 
-}
-getAllItems()
+    searchBtn.on('click', function (event) {
+      getAllItems();
+      // $('.input').val('');
+      });
+
 
 
 // Populate current items from API
 
-// function currentItemStore(event) {
-//   const options = {
-//     method: "GET",
-//     headers: { "TRN-API-Key": "e486b319-39d4-49b9-a3f1-ee5151dd4bb6" },
-//   };
+function currentItemStore(event) {
+  const options = {
+    method: "GET",
+    headers: { "TRN-API-Key": "e486b319-39d4-49b9-a3f1-ee5151dd4bb6" },
+  };
 
-//   fetch(
-//     "https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store",
-//     options
-//   )
-//     .then((response) => response.json())
-//     .then(function (data) {
-//       console.log(data);
-//       for (var i = 0; i < data.length; i++) {
-//         // gallery from HTML
-//         let displayEl = $("#current-gallery");
-//         // card div
-//         let currentItemCardsEl = $(`<div class="card" id="item-card"></div>`);
-//         // img
-//         let itemImgDiv = $(`<div class='card-image'></div>`);
-//         let itemImageEl = $(
-//           `<figure class='image is-3by2'><img src='${data[i].imageUrl}'/></figure>`
-//         );
-//         itemImgDiv.append(itemImageEl);
-//         // card content
-//         let itemContentDiv = $(`<div class='card-content'></div>`);
-//         let itemNameEl = $(`<h3>${data[i].name}</h3>`);
-//         let itemRarityEl = $(`<h4>${data[i].rarity}</h4>`);
-//         let itemCostEl = $(`<h4>${data[i].vBucks}</h4>`);
-//         itemContentDiv.append(itemNameEl, itemRarityEl, itemCostEl);
-//         // button
-//         let wishlistBtnEl = $(
-//           `<button class=wishlist-btn>Add to Wishlist</button>`
-//         );
+  fetch(
+    "https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/store",
+    options
+  )
+    .then((response) => response.json())
+    .then(function (data) {
+      for (var i = 0; i < data.length; i++) {
+        // gallery from HTML
+        let displayEl = $("#current-gallery");
+        // card div
+        let currentItemCardsEl = $(`<div class="card" id="item-card"></div>`);
+        // img
+        let itemImgDiv = $(`<div class='card-image'></div>`);
+        let itemImageEl = $(
+          `<figure class='image is-3by2'><img src='${data[i].imageUrl}'/></figure>`
+        );
+        itemImgDiv.append(itemImageEl);
+        // card content
+        let itemContentDiv = $(`<div class='card-content'></div>`);
+        let itemNameEl = $(`<h3>${data[i].name}</h3>`);
+        let itemRarityEl = $(`<h4>${data[i].rarity}</h4>`);
+        let itemCostEl = $(`<h4>${data[i].vBucks}</h4>`);
+        itemContentDiv.append(itemNameEl, itemRarityEl, itemCostEl);
+        // button
+        let wishlistBtnEl = $(
+          `<button class=wishlist-btn>Add to Wishlist</button>`
+        );
 
-//         currentItemCardsEl.append(itemImgDiv, itemContentDiv, wishlistBtnEl);
-//         displayEl.append(currentItemCardsEl);
-//       }
-//     })
-//     .catch((err) => console.error(err));
-// }
+        currentItemCardsEl.append(itemImgDiv, itemContentDiv, wishlistBtnEl);
+        displayEl.append(currentItemCardsEl);
+      }
+    })
+    .catch((err) => console.error(err));
+}
 
-// currentItemStore();
+currentItemStore();
 
 // // Local storage for wishlist/searchbar
 // var wishlistAdder = document.querySelector(".wishlistAdder");

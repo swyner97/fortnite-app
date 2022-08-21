@@ -68,22 +68,24 @@
 
     </div>
   </nav>
-  <div class="container">
+  <div class="container" id="search-bar-div">
 
 <input 
   type="search" 
-  oninput="getAllItems()" 
   id="searchbox" 
   class="input center is-rounded" style="width: 33%;" type="text">
+  </input>
+  <button class="button" type="button">Search</button>
   </div>
   <hr>
   </div>
 
-  <h2 id="store-title">Today's Fortnite Store</h2>
-  <div class="columns is-multiline" id="current-gallery">
+
+  <h2 id="store-title">From the Archive</h2>
+  <div class="columns is-multiline">
   </div>
   <hr>
-  <div class="cards is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-center">
+  <div class="cards search-cards is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-center">
 
   </div>
   <footer class="footer">

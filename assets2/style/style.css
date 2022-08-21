@@ -1,7 +1,6 @@
 body {
   display: block;
   flex-wrap: wrap;
-  /* background: url("./assets/images/image3.png"); */
   background-color: hsl(217, 71%, 45%);
   justify-content: space-around;
 }
@@ -11,17 +10,25 @@ body {
   font-family: "Girassol", cursive;
 }
 
+#search-bar-div {
+  text-align: center;
+}
+
 .input {
   margin: auto;
   margin-top: 10px;
+}
 
+.button {
+  margin-top: 10px;
+  font-family: "Girassol", cursive;
+  color: hsl(217, 71%, 45%);
+  font-size: x-large;
 }
 
 .container {
-  /* flex-grow: 1; */
   margin-left: auto;
   position: relative;
-  /* /* width: auto; */
 }
 
 .image img {
