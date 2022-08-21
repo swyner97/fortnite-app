@@ -5,6 +5,9 @@ let searchBtn = $('.button');
 
 
 let getAllItems = () => {
+
+  let searchBox = $('.input').val();
+  localStorage.setItem('searchItem', searchBox);
   
   var requestOptions = {
     method: 'GET',
@@ -16,8 +19,8 @@ let getAllItems = () => {
     .then(response => response.json())
     .then(data => {
       let card = document.querySelectorAll('.card');
-      let searchBox = $('.input').val();
-
+      let userSearch = localStorage.getItem('searchItem');
+      console.log(userSearch);
       for (let i = 0; i < data.data.length; i++) {
         let itemName = data.data[i].item.name.toString();
         let header = document.createElement('header');
@@ -38,34 +41,38 @@ let getAllItems = () => {
         imgDiv.classList.add('card-image');
         let cardsContainer = document.querySelector('.cards');
         let cardDiv = document.createElement('div');
-        cardDiv.classList.add('card', 'is-hidden')
+        cardDiv.classList.add('card', 'is-hidden');
+        let wishlistBtnEl = document.createElement('button');
+        wishlistBtnEl.innerHTML = 'Add to Wishlist';
+        wishlistBtnEl.setAttribute('class', 'wishlist-btn');
+        
 
-        rarityEl.append(rarity)
-        priceDiv.append(itemPrice)
-        header.append(name)
-        name.append(itemName)
-        itemContent.append(contentDiv);
+        rarityEl.append(rarity);
+        priceDiv.append(itemPrice);
+        header.append(name);
+        name.append(itemName);
+        itemContent.append(contentDiv, wishlistBtnEl);
         contentDiv.append(name, priceDiv, rarityEl, itemInfo)
         cardDiv.append(imgDiv, itemContent);
-        cardsContainer.append(cardDiv)
+        cardsContainer.append(cardDiv);
         imgDiv.append(imgEl);
       }
       for (let i = 0; i < card.length; i++) {
         if (card[i].innerText.toLowerCase()
-          .includes(searchBox.toLowerCase())) {
+          .includes(userSearch.toLowerCase())) {
           card[i].classList.remove('is-hidden');
 
         } else {
           card[i].classList.add('is-hidden')
         }
 
-      }
+      };
     }).catch(error => console.log('error', error));
 };
 
     searchBtn.on('click', function (event) {
-      getAllItems();
-      // $('.input').val('');
+      getAllItems()
+      $('.input').val('');
       });
 
 
