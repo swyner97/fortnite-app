@@ -30,7 +30,19 @@
     </div>
 </section>
     <hr>
-   
+    <section><div id="modal-js-example" class="modal">
+      <div class="modal-background"></div>
+    
+      <div class="modal-content">
+        <div class="box">
+          <p>Hi, My name is Andre.</p>
+          <img src="./images/image4.png">
+          <!-- Your content -->
+        </div>
+      </div>
+    
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div></section>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <div class="container">
@@ -55,7 +67,7 @@
                 Wish List
               </a>
       
-              <a href="" class="navbar-item">
+              <a class="navbar-item js-modal-trigger" data-target="modal-js-example">
                 About
               </a>
         
@@ -89,6 +101,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="./js2/modal.js"></script>
     <script src="./js2/script.js"></script>
     <script src="./js2/burger.js"></script>
     

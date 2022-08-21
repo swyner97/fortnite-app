@@ -113,6 +113,11 @@ caption{
   text-align: center;
 }
 
+.box{
+color:white;
+  background-color: hsl(217, 71%, 45%) !important;
+
+}
 #item-card {
   background-image: radial-gradient(hsl(225, 31%, 60%), hsl(217, 74%, 22%));
   border: solid 7px #3e8ed0;
