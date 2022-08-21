@@ -106,6 +106,7 @@ caption{
   background: rgb(100,222,246);
 background: radial-gradient(circle, rgba(100,222,246,1) 0%, rgba(9,9,121,1) 41%, rgba(2,0,36,1) 69%);
 width: fit-content;
+margin: 10px;
 }
 
 .content {
@@ -119,6 +120,7 @@ width: fit-content;
 .card-image {
   max-width: 512px;
 }
+
 
 /* Current store cards style */
 

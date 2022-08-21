@@ -10,19 +10,20 @@ let getAllItems = () => {
     redirect: 'follow'
   };
 
-  fetch("https://fortnite-api.theapinetwork.com/store/get", requestOptions)
+  fetch("https://fortnite-api.theapinetwork.com/items/list", requestOptions)
     .then(response => response.json())
     .then(data => {
+      let card = document.querySelectorAll('.card');
+      let searchBox = document.getElementById('searchbox').value;
 
       for (let i = 0; i < data.data.length; i++) {
         let itemName = data.data[i].item.name.toString();
-
         let header = document.createElement('header');
         let name = document.createElement('p');
         let priceDiv = document.createElement('div')
         header.classList.add('card-header')
         let itemInfo = data.data[i].item.description;
-        let itemPrice = data.data[i].store.cost;
+        let itemPrice = data.data[i].item.cost;
         let imgEl = document.createElement('img');
         imgEl.setAttribute('src', data.data[i].item.images.icon);
         let itemContent = document.createElement('div');
@@ -32,8 +33,8 @@ let getAllItems = () => {
         let imgDiv = document.createElement('div');
         imgDiv.classList.add('card-image');
         let cardsContainer = document.querySelector('.cards');
-        let cardDiv = document.createElement('div')
-        cardDiv.classList.add('card')
+        let cardDiv = document.createElement('div');
+        cardDiv.classList.add('card', 'is-hidden')
         priceDiv.append(itemPrice)
         header.append(name)
         name.append(itemName)
@@ -42,11 +43,11 @@ let getAllItems = () => {
         cardDiv.append(imgDiv, itemContent);
         cardsContainer.append(cardDiv)
         imgDiv.append(imgEl);
+
+
+
       }
-      let card = document.querySelectorAll('.card');
       for (let i = 0; i < card.length; i++) {
-        
-        let searchBox = document.getElementById('searchbox').value;
         if (card[i].innerText.toLowerCase()
           .includes(searchBox.toLowerCase())) {
           card[i].classList.remove('is-hidden');
@@ -56,19 +57,9 @@ let getAllItems = () => {
         }
 
       }
-
-
-      // console.log(data.data.length)
-      // let result = data.data.filter(filterFunc)
-      // console.log(result)
     }).catch(error => console.log('error', error));
 
 }
-
-// let filterFunc = (data) => {
-//   return data.item.name == 'Shadow Ops'
-// }
-
 getAllItems()
 
 
