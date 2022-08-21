@@ -24,6 +24,8 @@ let getAllItems = () => {
         header.classList.add('card-header')
         let itemInfo = data.data[i].item.description;
         let itemPrice = data.data[i].item.cost;
+        let rarityEl = document.createElement('p');
+        let rarity = data.data[i].item.rarity;
         let imgEl = document.createElement('img');
         imgEl.setAttribute('src', data.data[i].item.images.icon);
         let itemContent = document.createElement('div');
@@ -35,17 +37,16 @@ let getAllItems = () => {
         let cardsContainer = document.querySelector('.cards');
         let cardDiv = document.createElement('div');
         cardDiv.classList.add('card', 'is-hidden')
+
+        rarityEl.append(rarity)
         priceDiv.append(itemPrice)
         header.append(name)
         name.append(itemName)
         itemContent.append(contentDiv);
-        contentDiv.append(name, priceDiv, itemInfo)
+        contentDiv.append(name, priceDiv, rarityEl, itemInfo)
         cardDiv.append(imgDiv, itemContent);
         cardsContainer.append(cardDiv)
         imgDiv.append(imgEl);
-
-
-
       }
       for (let i = 0; i < card.length; i++) {
         if (card[i].innerText.toLowerCase()

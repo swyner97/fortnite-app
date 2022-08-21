@@ -12,16 +12,18 @@ body {
 }
 
 .input {
-margin:auto;
-  margin-top:10px;
- 
- }
- .container{
-     /* flex-grow: 1; */
-     margin-left: auto;
-     position: relative;
-     /* /* width: auto; */
- }
+  margin: auto;
+  margin-top: 10px;
+
+}
+
+.container {
+  /* flex-grow: 1; */
+  margin-left: auto;
+  position: relative;
+  /* /* width: auto; */
+}
+
 .image img {
   max-width: 950px;
   padding: 12px;
@@ -38,34 +40,35 @@ margin:auto;
   justify-content: space-around;
   background-color: hsl(217, 71%, 45%);
 }
-.navbar-item, .navbar-link {
+
+.navbar-item,
+.navbar-link {
   color: white;
   font-size: xx-large;
   display: block;
-background:hsl(217, 71%, 45%);
+  background: hsl(217, 71%, 45%);
   padding: 0.5rem 0.75rem;
   position: relative;
 }
-.navbar-burger{
+
+.navbar-burger {
   color: white;
-  background:hsl(217, 71%, 45%);
+  background: hsl(217, 71%, 45%);
   box-shadow: transparent;
 }
-.navbar-brand a:hover{
 
-  color:#ffe08a;
-
-
+.navbar-brand a:hover {
+  color: #ffe08a;
 }
+
 .navbar-menu.is-active {
-background: none;
-box-shadow: 10px 5px 5px black;
+  background: none;
+  box-shadow: 10px 5px 5px black;
 
 }
-.navbar-burger.is-active{
+
+.navbar-burger.is-active {
   background: hsl(217, 71%, 45%);
-
-
 }
 
 a {
@@ -75,15 +78,16 @@ a {
   margin: 12px;
 }
 
-h2 p{
+h2 p {
   color: white;
   font-family: "Girassol", cursive;
 }
-.footer{
+
+.footer {
   font-family: 'Girassol', cursive;
   background-color: hsl(217, 71%, 45%);
-  color:white;
-  font-size:x-large;
+  color: white;
+  font-size: x-large;
   text-align: center;
 }
 
@@ -93,8 +97,8 @@ h2 {
   font-family: 'Girassol', cursive;
   margin: 8px;
 }
-caption{
 
+caption {
   justify-content: space-around;
   color: white;
   font-family: 'Girassol', cursive;
@@ -103,10 +107,10 @@ caption{
 
 
 .card {
-  background: rgb(100,222,246);
-background: radial-gradient(circle, rgba(100,222,246,1) 0%, rgba(9,9,121,1) 41%, rgba(2,0,36,1) 69%);
-width: fit-content;
-margin: 10px;
+  background: rgb(100, 222, 246);
+  background: radial-gradient(circle, rgba(100, 222, 246, 1) 0%, rgba(9, 9, 121, 1) 41%, rgba(2, 0, 36, 1) 69%);
+  width: fit-content;
+  margin: 10px;
 }
 
 .content {
@@ -142,16 +146,15 @@ margin: 10px;
   margin: 1%;
   font-family: "Girassol", cursive;
   text-align: center;
-  opacity:85%;
+  opacity: 85%;
 }
-#item-card:hover{
-cursor:pointer;
+
+#item-card:hover {
+  cursor: pointer;
   transform: scale(1.1);
-  opacity:100%;
+  opacity: 100%;
   box-shadow: 10px 5px 5px black;
   border: solid 7px #d3b460;
-
-
 }
 
 
@@ -160,7 +163,7 @@ cursor:pointer;
   width: 75%;
   justify-content: center;
   margin: auto;
-  transition:all;
+  transition: all;
 }
 
 #item-card h3 {
@@ -182,15 +185,17 @@ cursor:pointer;
   border-radius: 12px;
   font-size: 25px;
   margin-bottom: 5px;
-  
+
 }
-#item-card button:hover{
- 
-  cursor:pointer;
-  background-color:#3e8ed0;
+
+#item-card button:hover {
+
+  cursor: pointer;
+  background-color: #3e8ed0;
 }
-#item-card button:active{
-cursor:grabbing;
+
+#item-card button:active {
+  cursor: grabbing;
 
 }
 
