@@ -41,6 +41,7 @@ let getAllItems = () => {
         imgDiv.classList.add('card-image');
         let cardsContainer = document.querySelector('.cards');
         let cardDiv = document.createElement('div');
+        cardDiv.setAttribute('id','item-card')
         cardDiv.classList.add('card', 'is-hidden');
         let wishlistBtnEl = document.createElement('button');
         wishlistBtnEl.innerHTML = 'Add to Wishlist';
@@ -122,58 +123,58 @@ function currentItemStore(event) {
 
 currentItemStore();
 
-// // Local storage for wishlist/searchbar
-// var wishlistAdder = document.querySelector(".wishlistAdder");
-// var itemName = document.querySelector("#item");
-// var searchBarInput = document.querySelector("#searchBar");
-// var searchButton = document.querySelector("#searchBtn");
+// Local storage for wishlist/searchbar
+var wishlistAdder = document.querySelector(".wishlistAdder");
+var itemName = document.querySelector("#item");
+var searchBarInput = document.querySelector("#searchBar");
+var searchButton = document.querySelector("#searchBtn");
 
-// var wishlist = [];
-// var lastSearched = [];
+var wishlist = [];
+var lastSearched = [];
 
-// function renderWishlist() {}
+function renderWishlist() {}
 
-// function init() {
-//   var storedWishlist = JSON.parse(localstorage.getItem("wishlist"));
-//   var storedSearches = JSON.parse(localStorage.getItem("lastSearched"));
+function init() {
+  var storedWishlist = JSON.parse(localstorage.getItem("wishlist"));
+  var storedSearches = JSON.parse(localStorage.getItem("lastSearched"));
 
-//   if (storedWishlist !== null || storedSearches !== null) {
-//     wishlist = storedWishlist;
-//     lastSearched = storedSearches;
-//   }
-// }
+  if (storedWishlist !== null || storedSearches !== null) {
+    wishlist = storedWishlist;
+    lastSearched = storedSearches;
+  }
+}
 
-// function addToWishlist() {
-//   localStorage.setItem("wishlist", JSON.stringify(wishlist));
-// }
+function addToWishlist() {
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+}
 
-// wishlistAdder.addEventListener("click", function () {
-//   wishlist.push(itemName);
+wishlistAdder.addEventListener("click", function () {
+  wishlist.push(itemName);
 
-//   addToWishlist();
-//   renderWishlist();
-// });
+  addToWishlist();
+  renderWishlist();
+});
 
-// function storeLastSearched() {
-//   localStorage.setItem("lastSearched", JSON.stringify(lastSearched));
-// }
+function storeLastSearched() {
+  localStorage.setItem("lastSearched", JSON.stringify(lastSearched));
+}
 
-// searchButton.addEventListener("click", function (event) {
-//   event.preventDefault();
+searchButton.addEventListener("click", function (event) {
+  event.preventDefault();
 
-//   var searchText = searchBarInput.value.trim();
+  var searchText = searchBarInput.value.trim();
 
-//   if (searchText === "") {
-//     return;
-//   }
+  if (searchText === "") {
+    return;
+  }
 
-//   lastSearched.push(searchText);
-//   searchBarInput.value = "";
+  lastSearched.push(searchText);
+  searchBarInput.value = "";
 
-//   storeLastSearched();
-// });
+  storeLastSearched();
+});
 
-// init();
+init();
 
 // In order to get access to this api, we have to go to this link (cors-anywhere.herokuapp.com) and get access every day/every time we work on the project.
 // We also have to put this in our README for the grading team so they can refresh before grading.
