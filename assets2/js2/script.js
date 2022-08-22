@@ -20,7 +20,7 @@ let getAllItems = () => {
     .then(data => {
       let card = document.querySelectorAll('.card');
       let userSearch = localStorage.getItem('searchItem');
-      console.log(userSearch);
+
       for (let i = 0; i < data.data.length; i++) {
         let itemName = data.data[i].item.name.toString();
         let header = document.createElement('header');
@@ -41,11 +41,15 @@ let getAllItems = () => {
         imgDiv.classList.add('card-image');
         let cardsContainer = document.querySelector('.cards');
         let cardDiv = document.createElement('div');
+        cardDiv.setAttribute('id', 'card-div-object')
         cardDiv.classList.add('card', 'is-hidden');
         let wishlistBtnEl = document.createElement('button');
         wishlistBtnEl.innerHTML = 'Add to Wishlist';
         wishlistBtnEl.setAttribute('class', 'wishlist-btn');
-        
+        wishlistBtnEl.setAttribute('item-name', data.data[i].item.name.toString());
+        wishlistBtnEl.setAttribute('item-rarity', data.data[i].item.rarity);
+        wishlistBtnEl.setAttribute('item-cost', data.data[i].item.cost);
+        wishlistBtnEl.setAttribute('item-img', data.data[i].item.images.icon)
 
         rarityEl.append(rarity);
         priceDiv.append(itemPrice);
@@ -56,6 +60,7 @@ let getAllItems = () => {
         cardDiv.append(imgDiv, itemContent);
         cardsContainer.append(cardDiv);
         imgDiv.append(imgEl);
+    
       }
       for (let i = 0; i < card.length; i++) {
         if (card[i].innerText.toLowerCase()
@@ -67,8 +72,18 @@ let getAllItems = () => {
         }
 
       };
-    }).catch(error => console.log('error', error));
-};
+      $('.wishlist-btn').unbind().on('click', function (event) {
+        let wishlistName = $(this).attr('item-name');
+        let wishlistRare = $(this).attr('item-rarity');
+        let wishlistCost = $(this).attr('item-cost');
+        let wishlistImg = $(this).attr('item-img');
+        event.preventDefault();
+        
+        if (!wishlist.includes(wishlistName)){
+          wishlist.push({Name: `${wishlistName}`, Rarity: `${wishlistRare}`, Cost: `${wishlistCost}`, Url: `${wishlistImg}`});
+          localStorage.setItem("wishlist",JSON.stringify(wishlist));
+    }}).catch(error => console.log('error', error));
+});};
 
     searchBtn.on('click', function (event) {
       getAllItems()
@@ -104,76 +119,78 @@ function currentItemStore(event) {
         itemImgDiv.append(itemImageEl);
         // card content
         let itemContentDiv = $(`<div class='card-content'></div>`);
-        let itemNameEl = $(`<h3>${data[i].name}</h3>`);
-        let itemRarityEl = $(`<h4>${data[i].rarity}</h4>`);
-        let itemCostEl = $(`<h4>${data[i].vBucks}</h4>`);
+        let itemNameEl = $(`<h3 id='item-name'>${data[i].name}</h3>`);
+        let itemRarityEl = $(`<h4 id='item-rarity'>${data[i].rarity}</h4>`);
+        let itemCostEl = $(`<h4 id='item-cost'>${data[i].vBucks}</h4>`);
         itemContentDiv.append(itemNameEl, itemRarityEl, itemCostEl);
         // button
         let wishlistBtnEl = $(
-          `<button class=wishlist-btn>Add to Wishlist</button>`
+          `<button class='wishlist-btn' 
+          item-name='${data[i].name}'
+          item-rarity='${data[i].rarity}'
+          item-img='${data[i].imageUrl}'
+          item-cost='${data[i].vBucks}'>
+          Add to Wishlist</button>`
         );
 
         currentItemCardsEl.append(itemImgDiv, itemContentDiv, wishlistBtnEl);
         displayEl.append(currentItemCardsEl);
+
+         // var wishlistAdder = document.querySelector(".wishlist-btn");
+    $('.wishlist-btn').unbind().on('click', function (event) {
+      let wishlistName = $(this).attr('item-name');
+      let wishlistRare = $(this).attr('item-rarity');
+      let wishlistCost = $(this).attr('item-cost');
+      let wishlistImg = $(this).attr('item-img');
+      event.preventDefault();
+      
+      if (!wishlist.includes(wishlistName)){
+        wishlist.push({Name: `${wishlistName}`, Rarity: `${wishlistRare}`, Cost: `${wishlistCost}`, Url: `${wishlistImg}`});
+        localStorage.setItem("wishlist",JSON.stringify(wishlist));
       }
-    })
+    });
+      }})
     .catch((err) => console.error(err));
-}
+};
 
 currentItemStore();
 
 // // Local storage for wishlist/searchbar
-// var wishlistAdder = document.querySelector(".wishlistAdder");
-// var itemName = document.querySelector("#item");
-// var searchBarInput = document.querySelector("#searchBar");
-// var searchButton = document.querySelector("#searchBtn");
 
-// var wishlist = [];
-// var lastSearched = [];
+var wishlist = [];
+var lastSearched = [];
 
-// function renderWishlist() {}
 
-// function init() {
-//   var storedWishlist = JSON.parse(localstorage.getItem("wishlist"));
-//   var storedSearches = JSON.parse(localStorage.getItem("lastSearched"));
 
-//   if (storedWishlist !== null || storedSearches !== null) {
-//     wishlist = storedWishlist;
-//     lastSearched = storedSearches;
-//   }
-// }
+function init() {
+  var storedWishlist = JSON.parse(localStorage.getItem("wishlist"));
 
-// function addToWishlist() {
-//   localStorage.setItem("wishlist", JSON.stringify(wishlist));
-// }
+  if (storedWishlist !== null) {
+for (i=0; i<storedWishlist.length; i++) {
+  // gallery from HTML
+  let displayEl = $("#wishlist-gallery");
+  // card div
+  let currentItemCardsEl = $(`<div class="card" id="item-card"></div>`);
+  // img
+  let itemImgDiv = $(`<div class='card-image'></div>`);
+  let itemImageEl = $(
+    `<figure class='image is-3by2'><img src='${storedWishlist[i].Url}'/></figure>`
+  );
+  itemImgDiv.append(itemImageEl);
+  // card content
 
-// wishlistAdder.addEventListener("click", function () {
-//   wishlist.push(itemName);
+  console.log(storedWishlist)
+  let itemContentDiv = $(`<div class='card-content'></div>`);
+  let itemNameEl = $(`<h3 id='item-name'>${storedWishlist[i].Name}</h3>`);
+  let itemRarityEl = $(`<h4 id='item-rarity'>${storedWishlist[i].Rarity}</h4>`);
+  let itemCostEl = $(`<h4 id='item-cost'>${storedWishlist[i].Cost}</h4>`);
+  itemContentDiv.append(itemNameEl, itemRarityEl, itemCostEl);
 
-//   addToWishlist();
-//   renderWishlist();
-// });
-
-// function storeLastSearched() {
-//   localStorage.setItem("lastSearched", JSON.stringify(lastSearched));
-// }
-
-// searchButton.addEventListener("click", function (event) {
-//   event.preventDefault();
-
-//   var searchText = searchBarInput.value.trim();
-
-//   if (searchText === "") {
-//     return;
-//   }
-
-//   lastSearched.push(searchText);
-//   searchBarInput.value = "";
-
-//   storeLastSearched();
-// });
-
-// init();
-
+  currentItemCardsEl.append(itemImgDiv, itemContentDiv);
+  displayEl.append(currentItemCardsEl);
+}
+  }
+};
+  
 // In order to get access to this api, we have to go to this link (cors-anywhere.herokuapp.com) and get access every day/every time we work on the project.
 // We also have to put this in our README for the grading team so they can refresh before grading.
