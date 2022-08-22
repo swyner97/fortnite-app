@@ -41,7 +41,8 @@ let getAllItems = () => {
         imgDiv.classList.add('card-image');
         let cardsContainer = document.querySelector('.cards');
         let cardDiv = document.createElement('div');
-        cardDiv.setAttribute('id', 'card-div-object')
+        cardDiv.setAttribute('id', 'card-div-object');
+        cardDiv.setAttribute('id', 'item-card');
         cardDiv.classList.add('card', 'is-hidden');
         let wishlistBtnEl = document.createElement('button');
         wishlistBtnEl.innerHTML = 'Add to Wishlist';
@@ -79,9 +80,9 @@ let getAllItems = () => {
         let wishlistImg = $(this).attr('item-img');
         event.preventDefault();
         
-        if (!wishlist.includes(wishlistName)){
-          wishlist.push({Name: `${wishlistName}`, Rarity: `${wishlistRare}`, Cost: `${wishlistCost}`, Url: `${wishlistImg}`});
-          localStorage.setItem("wishlist",JSON.stringify(wishlist));
+        if (!searchWishlist.includes(wishlistName)){
+          searchWishlist.push({Name: `${wishlistName}`, Rarity: `${wishlistRare}`, Cost: `${wishlistCost}`, Url: `${wishlistImg}`});
+          localStorage.setItem("searched-wishlist",JSON.stringify(searchWishlist));
     }}).catch(error => console.log('error', error));
 });};
 
@@ -158,12 +159,14 @@ currentItemStore();
 // // Local storage for wishlist/searchbar
 
 var wishlist = [];
+var searchWishlist = []
 var lastSearched = [];
 
 
 
 function init() {
   var storedWishlist = JSON.parse(localStorage.getItem("wishlist"));
+  var searchStoredWishlist = JSON.parse(localStorage.getItem('searched-wishlist'));
 
   if (storedWishlist !== null) {
 for (i=0; i<storedWishlist.length; i++) {
@@ -189,7 +192,32 @@ for (i=0; i<storedWishlist.length; i++) {
   currentItemCardsEl.append(itemImgDiv, itemContentDiv);
   displayEl.append(currentItemCardsEl);
 }
-  }
+  };
+  
+  if (searchStoredWishlist !== null) {
+    for (i=0; i<searchStoredWishlist.length; i++) {
+      // gallery from HTML
+      let displayEl = $("#wishlist-gallery");
+      // card div
+      let currentItemCardsEl = $(`<div class="card" id="item-card"></div>`);
+      // img
+      let itemImgDiv = $(`<div class='card-image'></div>`);
+      let itemImageEl = $(
+        `<figure class='image is-3by2'><img src='${searchStoredWishlist[i].Url}'/></figure>`
+      );
+      itemImgDiv.append(itemImageEl);
+      // card content
+    
+      let itemContentDiv = $(`<div class='card-content'></div>`);
+      let itemNameEl = $(`<h3 id='item-name'>${searchStoredWishlist[i].Name}</h3>`);
+      let itemRarityEl = $(`<h4 id='item-rarity'>${searchStoredWishlist[i].Rarity}</h4>`);
+      let itemCostEl = $(`<h4 id='item-cost'>${searchStoredWishlist[i].Cost}</h4>`);
+      itemContentDiv.append(itemNameEl, itemRarityEl, itemCostEl);
+    
+      currentItemCardsEl.append(itemImgDiv, itemContentDiv);
+      displayEl.append(currentItemCardsEl);
+    }
+      }
 };
   
 // In order to get access to this api, we have to go to this link (cors-anywhere.herokuapp.com) and get access every day/every time we work on the project.

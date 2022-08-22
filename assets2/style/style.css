@@ -26,6 +26,10 @@ body {
   font-size: x-large;
 }
 
+.button-div {
+  display: flex;
+  justify-content: center;
+}
 .container {
   margin-left: auto;
   position: relative;
