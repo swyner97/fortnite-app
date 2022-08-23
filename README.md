@@ -38,4 +38,6 @@ Click this link to request temporary acces to get the full experience: https://c
 
 ### Project Link: https://swyner97.github.io/fortnite-app/
 
+![alt text](https://github.com/swyner97/fortnite-app/blob/main/assets/images/fortnite-app-screenshot.png?raw=true)
+
 By Sarah, Clay, Andre, Tristan and Fernando
