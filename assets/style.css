@@ -1,0 +1,219 @@
+body {
+    display: block;
+    flex-wrap: wrap;
+    background-color: hsl(217, 71%, 45%);
+    justify-content: space-around;
+  }
+  
+  .title {
+    color: white;
+    font-family: "Girassol", cursive;
+  }
+  
+  #search-bar-div {
+    text-align: center;
+  }
+  
+  .input {
+    margin: auto;
+    margin-top: 10px;
+  }
+  
+  .button {
+    margin-top: 10px;
+    font-family: "Girassol", cursive;
+    color: hsl(217, 71%, 45%);
+    font-size: x-large;
+  }
+  
+  .button-div {
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    margin-left: auto;
+    position: relative;
+  }
+  
+  .image img {
+    max-width: 950px;
+    padding: 12px;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: hsl(217, 71%, 45%);
+  }
+  
+  .navbar-item,
+  .navbar-link {
+    color: white;
+    font-size: xx-large;
+    display: block;
+    background: hsl(217, 71%, 45%);
+    padding: 0.5rem 0.75rem;
+    position: relative;
+  }
+  
+  .navbar-burger {
+    color: white;
+    background: hsl(217, 71%, 45%);
+    box-shadow: transparent;
+  }
+  
+  .navbar-brand a:hover {
+    color: #ffe08a;
+  }
+  
+  .navbar-menu.is-active {
+    background: none;
+    box-shadow: 10px 5px 5px black;
+  
+  }
+  
+  .navbar-burger.is-active {
+    background: hsl(217, 71%, 45%);
+  }
+  
+  a {
+    justify-content: space-around;
+    color: white;
+    font-family: "Girassol", cursive;
+    margin: 12px;
+  }
+  
+  h2 p {
+    color: white;
+    font-family: "Girassol", cursive;
+  }
+  
+  .footer {
+    font-family: 'Girassol', cursive;
+    background-color: hsl(217, 71%, 45%);
+    color: white;
+    font-size: x-large;
+    text-align: center;
+  }
+  
+  h2 {
+    justify-content: space-around;
+    color: white;
+    font-family: 'Girassol', cursive;
+    margin: 8px;
+  }
+  
+  caption {
+    justify-content: space-around;
+    color: white;
+    font-family: 'Girassol', cursive;
+    margin: 12px;
+  }
+  
+  
+  .card {
+    background: rgb(100, 222, 246);
+    background: radial-gradient(circle, rgba(100, 222, 246, 1) 0%, rgba(9, 9, 121, 1) 41%, rgba(2, 0, 36, 1) 69%);
+    width: fit-content;
+    margin: 10px;
+  }
+  
+  .content {
+    color: #fff
+  }
+  
+  .is-hidden {
+    display: none;
+  }
+  
+  .card-image {
+    max-width: 512px;
+  }
+  
+  
+  /* Current store cards style */
+  
+  #store-title {
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  #current-gallery {
+    text-align: center;
+  }
+  
+  #item-card {
+    background-image: radial-gradient(hsl(225, 31%, 60%), hsl(217, 74%, 22%));
+    border: solid 7px #3e8ed0;
+    color: #d3b460;
+    height: 23%;
+    width: 23%;
+    margin: 1%;
+    font-family: "Girassol", cursive;
+    text-align: center;
+    opacity: 85%;
+  }
+  
+  #item-card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 100%;
+    box-shadow: 10px 5px 5px black;
+    border: solid 7px #d3b460;
+  }
+  
+  
+  #item-card img {
+    height: 95%;
+    width: 75%;
+    justify-content: center;
+    margin: auto;
+    transition: all;
+  }
+  
+  #item-card h3 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #item-card h4 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #item-card button {
+    margin: auto;
+    color: white;
+    background-color: hsl(217, 71%, 45%);
+    border-radius: 12px;
+    font-size: 25px;
+    margin-bottom: 5px;
+  
+  }
+  
+  #item-card button:hover {
+  
+    cursor: pointer;
+    background-color: #3e8ed0;
+  }
+  
+  #item-card button:active {
+    cursor: grabbing;
+  
+  }
+  
+  @media only screen and (max-width: 770px) {
+    #item-card {
+      width: 320px;
+      height: 500px;
+      display: inline-block;
+    }
+  }
