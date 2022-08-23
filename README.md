@@ -1,5 +1,6 @@
 # Fortnite App
 
+## Description
 User Story:
 
 AS A fortnite player
@@ -24,3 +25,12 @@ SO THAT personalize my char without logging into the game
 <li>WHEN I click on any item </li>
 <li>THEN I AM presentend with a bio containing the price, store category, rareity and bigger picture of item
 </ul>
+
+## Technologies Used: 
+
+- HTML
+- CSS
+- Javascript 
+- JQuery 
+- Bulma
+
