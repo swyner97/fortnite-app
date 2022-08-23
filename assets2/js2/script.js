@@ -41,12 +41,10 @@ let getAllItems = () => {
         imgDiv.classList.add('card-image');
         let cardsContainer = document.querySelector('.cards');
         let cardDiv = document.createElement('div');
-        cardDiv.setAttribute('id','item-card')
         cardDiv.classList.add('card', 'is-hidden');
         let wishlistBtnEl = document.createElement('button');
         wishlistBtnEl.innerHTML = 'Add to Wishlist';
         wishlistBtnEl.setAttribute('class', 'wishlist-btn');
-        
 
         rarityEl.append(rarity);
         priceDiv.append(itemPrice);

@@ -133,8 +133,8 @@ caption {
 }
 
 #item-card {
-  background: rgb(10,0,252);
-  background: radial-gradient(circle, rgba(10,0,252,1) 0%, rgba(49,255,254,1) 0%, rgba(6,0,154,1) 75%);
+  background: rgb(100, 222, 246);
+  background: radial-gradient(circle, rgba(100, 222, 246, 1) 0%, rgba(9, 9, 121, 1) 41%, rgba(2, 0, 36, 1) 69%);
   border: solid 7px #3e8ed0;
   color: #d3b460;
   height: 23%;
