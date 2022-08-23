@@ -182,7 +182,6 @@ for (i=0; i<storedWishlist.length; i++) {
   itemImgDiv.append(itemImageEl);
   // card content
 
-  console.log(storedWishlist)
   let itemContentDiv = $(`<div class='card-content'></div>`);
   let itemNameEl = $(`<h3 id='item-name'>${storedWishlist[i].Name}</h3>`);
   let itemRarityEl = $(`<h4 id='item-rarity'>${storedWishlist[i].Rarity}</h4>`);

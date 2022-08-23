@@ -7,10 +7,6 @@ AS A fortnite player
 I WANT to view items and add them to a wishlist 
 SO THAT personalize my char without logging into the game
 
-
-
-
-
 <ul>Acceptance Criteria:
 <hr>
 <li>GIVEN a fortnite shop catalog</li>
@@ -33,4 +29,13 @@ SO THAT personalize my char without logging into the game
 - Javascript 
 - JQuery 
 - Bulma
+- Fortnite Tracker API
+- Fortnite API
 
+## INSTRUCTIONS
+
+Click this link to request temporary acces to get the full experience: https://cors-anywhere.herokuapp.com/
+
+### Project Link: https://swyner97.github.io/fortnite-app/
+
+By Sarah, Clay, Andre, Tristan and Fernando
