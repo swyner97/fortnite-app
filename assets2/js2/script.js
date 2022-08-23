@@ -1,34 +1,81 @@
 var myHeaders = new Headers();
 myHeaders.append("Authorization", "{{authorization}}");
 
+let searchBtn = $('.button');
+
+
 let getAllItems = () => {
+
+  let searchBox = $('.input').val();
+  localStorage.setItem('searchItem', searchBox);
+  
   var requestOptions = {
-    method: "GET",
+    method: 'GET',
     headers: myHeaders,
-    redirect: "follow",
+    redirect: 'follow'
   };
 
-  fetch("https://fortnite-api.theapinetwork.com/store/get", requestOptions)
-    .then((response) => response.json())
-    .then((data) => {
+  fetch("https://fortnite-api.theapinetwork.com/items/list", requestOptions)
+    .then(response => response.json())
+    .then(data => {
+      let card = document.querySelectorAll('.card');
+      let userSearch = localStorage.getItem('searchItem');
+      console.log(userSearch);
       for (let i = 0; i < data.data.length; i++) {
         let itemName = data.data[i].item.name.toString();
+        let header = document.createElement('header');
+        let name = document.createElement('p');
+        let priceDiv = document.createElement('div')
+        header.classList.add('card-header')
         let itemInfo = data.data[i].item.description;
-        let itemPrice = data.data[i].store.cost;
-        let imgEl = document.createElement("img");
-        imgEl.setAttribute("src", data.data[i].item.images.icon);
-        let itemList = document.createElement("li");
-        let itemUl = document.querySelector(".all-items");
-        console.log(data.data[i].item.images.featured);
+        let itemPrice = data.data[i].item.cost;
+        let rarityEl = document.createElement('p');
+        let rarity = data.data[i].item.rarity;
+        let imgEl = document.createElement('img');
+        imgEl.setAttribute('src', data.data[i].item.images.icon);
+        let itemContent = document.createElement('div');
+        itemContent.classList.add('card-content');
+        let contentDiv = document.createElement('div');
+        contentDiv.classList.add('content', 'is-flex', 'is-flex-direction-column', 'is-align-items-center')
+        let imgDiv = document.createElement('div');
+        imgDiv.classList.add('card-image');
+        let cardsContainer = document.querySelector('.cards');
+        let cardDiv = document.createElement('div');
+        cardDiv.classList.add('card', 'is-hidden');
+        let wishlistBtnEl = document.createElement('button');
+        wishlistBtnEl.innerHTML = 'Add to Wishlist';
+        wishlistBtnEl.setAttribute('class', 'wishlist-btn');
+        
 
-        itemList.append(itemName, itemInfo, itemInfo, itemPrice, imgEl);
-        itemUl.append(itemList);
+        rarityEl.append(rarity);
+        priceDiv.append(itemPrice);
+        header.append(name);
+        name.append(itemName);
+        itemContent.append(contentDiv, wishlistBtnEl);
+        contentDiv.append(name, priceDiv, rarityEl, itemInfo)
+        cardDiv.append(imgDiv, itemContent);
+        cardsContainer.append(cardDiv);
+        imgDiv.append(imgEl);
       }
-    })
-    .catch((error) => console.log("error", error));
+      for (let i = 0; i < card.length; i++) {
+        if (card[i].innerText.toLowerCase()
+          .includes(userSearch.toLowerCase())) {
+          card[i].classList.remove('is-hidden');
+
+        } else {
+          card[i].classList.add('is-hidden')
+        }
+
+      };
+    }).catch(error => console.log('error', error));
 };
 
-getAllItems();
+    searchBtn.on('click', function (event) {
+      getAllItems()
+      $('.input').val('');
+      });
+
+
 
 // Populate current items from API
 
@@ -44,7 +91,6 @@ function currentItemStore(event) {
   )
     .then((response) => response.json())
     .then(function (data) {
-      console.log(data);
       for (var i = 0; i < data.length; i++) {
         // gallery from HTML
         let displayEl = $("#current-gallery");
@@ -76,16 +122,16 @@ function currentItemStore(event) {
 
 currentItemStore();
 
-// Local storage for wishlist/searchbar
-var wishlistAdder = document.querySelector(".wishlistAdder");
-var itemName = document.querySelector("#item");
-var searchBarInput = document.querySelector("#searchBar");
-var searchButton = document.querySelector("#searchBtn");
+// // Local storage for wishlist/searchbar
+// var wishlistAdder = document.querySelector(".wishlistAdder");
+// var itemName = document.querySelector("#item");
+// var searchBarInput = document.querySelector("#searchBar");
+// var searchButton = document.querySelector("#searchBtn");
 
-var wishlist = [];
-var lastSearched = [];
+// var wishlist = [];
+// var lastSearched = [];
 
-function renderWishlist() {}
+// function renderWishlist() {}
 
 // function init() {
 //   var storedWishlist = JSON.parse(localstorage.getItem("wishlist"));
@@ -129,5 +175,5 @@ function renderWishlist() {}
 
 // init();
 
-// // In order to get access to this api, we have to go to this link (cors-anywhere.herokuapp.com) and get access every day/every time we work on the project.
-// // We also have to put this in our README for the grading team so they can refresh before grading.
+// In order to get access to this api, we have to go to this link (cors-anywhere.herokuapp.com) and get access every day/every time we work on the project.
+// We also have to put this in our README for the grading team so they can refresh before grading.
